@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640">
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>Home | DatDiamond</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/DatDiamond">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Datdiamond.GitHub.io</h1>
+            <h2><a href="index.html">Home</a> | <a href="cookieclicker.html">Cookie Clicker</a> | <i>More coming soon!</i></h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <div id="no-downloads">
+        <span class="inner">
+        </span>
+      </div>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h3>
+<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Cookie Clicker</h3>
+
+<p>Cookie Clicker!</p>
+ <div id = "space"></div>
+   <div id = "cookie"> <div id = "chip"></div>
+   <div id = "chip2"></div>
+   <div id = "chip3"></div>
+   <div id = "chip4"></div></div>
+ 
+   
+   
+  
+   
+   
+   
+  what is your bakery called?<input type="text" name="message" value = "put your name!">
+  <input type = "submit" id = "sub" value="submit your name"><br>
+  
+    <p>intructions:to play this game you must click the cookie, when you do that you make cookies. You can upgrade...see the table for upgrade costs. NOTE: You AUTOMATICALLY upgrade! :)</p>
+    
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>how many cookies can it make?</td>
+            <td>cost</td>
+        </tr>
+        <tr>
+            <td>Granny!</td>
+            <td>Granny make 2x's as much!</td>
+            <td>30 cookies!</td>
+        </tr>
+        <tr>
+            <td>Factory</td>
+            <td> Factory makes 10x's as much!</td>
+            <td>500 cookies!</td>
+        </tr>
+        <tr>
+            <td>Plant</td>
+            <td> Plant makes 30x's as much!</td>
+            <td>1,000 cookies!</td>
+        </tr>
+         <tr>
+            <td>SuperPlant</td>
+            <td> SuperFactory makes 1000x's as much!</td>
+            <td>100,000 cookies!</td>
+        </tr>
+        
+    </table>
+     <div id = "numbers"></div>
+    
+    <!-- <svg width = "400" height="900">
+        <line x1 ="100" y1 = "200" x2 = "400" y2 = "300" stroke= "red"/>
+      </svg>-->
+       body {
+        font-family:monospace;
+        background-color:rgb(255, 136, 0);
+    }
+       #cookie{
+           text-align:center;
+            background-color:rgb(115, 63, 0);
+            height:100px;
+            width:100px;
+            border-radius:100%;
+        }
+        #chip {
+            position:absolute;
+            top:20px;
+            margin:50px;
+            padding:0px;
+            background-color:rgb(61, 61, 61);
+            height:8px;
+            width:8px;
+            border-radius:100%;
+        }
+        #chip2 {
+            position:absolute;
+            top:40px;
+            left:-16px;
+            margin:50px;
+            padding:0px;
+            background-color:rgb(61, 61, 61);
+            height:8px;
+            width:8px;
+            border-radius:100%;
+        }
+         #chip3 {
+            position:absolute;
+            top:2px;
+            left:-22px;
+            margin:50px;
+            padding:0px;
+            background-color:rgb(61, 61, 61);
+            height:8px;
+            width:8px;
+            border-radius:100%;
+        }
+        #chip4 {
+            position:absolute;
+            top:-17px;
+            left:23px;
+            margin:50px;
+            padding:0px;
+            background-color:rgb(61, 61, 61);
+            height:8px;
+            width:8px;
+            border-radius:100%;border-radius:100%;
+        }
+        
+        p {
+            
+            color:rgb(255, 255, 255);
+            z-index:1;
+            display:inline-block;
+            margin:5px;
+        }
+        
+        #space {
+            text-align:center;
+            border:5px solid;
+            border-radius:10px;
+            position:absolute;
+            left:122px;
+            top:20px;
+            background-color:grey;
+            width:389px;
+            height:78px;
+        }
+        table {
+            border:1px solid;
+        }
+        td {
+            border:1px solid;
+        }
+        var num = 0;
+
+        $(document).ready(function(){
+             
+            $("#sub").click(function(){
+                var name = $("input[name=message]").val();
+                $("#space").append("<h1>"+name+"'s bakery</h1>")
+            })
+            
+            $("#cookie").on('click',function(){
+                num+=1;
+                $('#numbers').append("<p class = nm> " + num + " <p>");
+                
+                
+                if(num >= 10 ){
+                    num += 2;
+                }
+                
+                if(num >= 500) {
+                    num += 4;
+                }
+                if(num >= 3000) {
+                    num += 10;
+                }
+                if(num >= 10000) {
+                    num += 40;
+                }
+                if(num >= 40000) {
+                    num += 100;
+                }
+                if(num >= 200000) {
+                    num += 400;
+                }
+            });
+           
+            
+            $("#cookie").draggable();
+            
+          $("#cookie").mouseenter(function(){
+            $("#cookie").animate({
+              width: '+= 5',
+              height: '+= 5'
+            });
+          });
+          
+                      
+          //$("#cookie").mouseleave(function(){
+            /*$("#cookie").animate({
+              width: '-= 5',
+              height: '-= 5'
+           });*/
+   });
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>Projects by <a href="https://github.com/DatDiamond">DatDiamond</a> can be found on <a href="https://github.com/DatDiamond">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
